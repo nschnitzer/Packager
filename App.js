@@ -1,12 +1,31 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, View } from 'react-native';
+import { Alert, Text, View, StyleSheet, } from 'react-native';
+import { GoogleSignin, GoogleSigninButton, statusCodes } from 'react-native-google-signin';
 
-export default class HelloWorldApp extends Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Hello, world!</Text>
-      </View>
-    );
-  }
+
+export default class Login extends Component {
+
+    componentDidMount() {
+        this._setupGoogleSignIn();
+    }
+
+    signIn = async () => {
+        try {
+            await GoogleSignin.hasPlayServices(
+                {showPlayServicesUpdateDialog: true});
+        }
+    }
+
+
+    render() {
+
+        return(
+            <GoogleSigninButton
+            style={{width: 192, height: 48 }}
+            size={GoogleSigninButton.Size.Wide}
+            color={GoogleSigninButton.Color.Dark}
+            onPress={this._signIn}
+            disabled={this.state.isSigninInProgress} />
+        );
+    }
 }
