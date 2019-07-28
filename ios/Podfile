@@ -33,6 +33,8 @@ target 'packager' do
   pod 'GoogleSignIn', '~> 4.4.0'
   pod 'Firebase/Analytics'
 
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
   target 'packagerTests' do
     inherit! :search_paths
     # Pods for testing

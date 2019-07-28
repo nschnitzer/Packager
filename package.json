@@ -8,9 +8,17 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "babel-preset-react-native": "2.1.0",
+    "native-base": "^2.13.0",
+    "prop-types": "^15.7.2",
     "react": "16.8.6",
     "react-native": "0.60.4",
-    "react-native-google-signin": "^2.0.0"
+    "react-native-awesome-alerts": "^1.2.0",
+    "react-native-gesture-handler": "^1.3.0",
+    "react-native-google-signin": "^2.0.0",
+    "react-native-paper": "^2.16.0",
+    "react-native-responsive-fontsize": "^0.2.1",
+    "react-navigation": "^3.11.1"
   },
   "devDependencies": {
     "@babel/core": "7.5.5",
